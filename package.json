@@ -1,0 +1,43 @@
+{
+  "name": "template-ng-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "template NG Server/Backend - API with email sign-up, verification, authentication,forgot password, bookings, SMS messaging, Email messaging, Review and so much more.",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.22.10",
+    "npm": "7.x"
+  },
+  "scripts": {
+    "deamon": "nodemon -r dotenv/config bin/server.js",
+    "dev": "pm2 start ecosystem.config.js --env development",
+    "staging": "pm2-runtime start ecosystem.config.js --env staging",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "production": "pm2-runtime start ecosystem.config.js --env production"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cron": "^2.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-sslify": "^1.2.0",
+    "glob": "^8.0.3",
+    "http": "^0.0.1-security",
+    "http-graceful-shutdown": "^3.1.12",
+    "mongoose": "^6.8.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "pm2": "^5.2.2",
+    "swagger-jsdoc": "^6.2.7",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

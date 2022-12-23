@@ -34,6 +34,7 @@
     "morgan": "^1.10.0",
     "path": "^0.12.7",
     "pm2": "^5.2.2",
+    "redis": "^4.5.1",
     "swagger-jsdoc": "^6.2.7",
     "swagger-ui-express": "^4.6.0"
   },

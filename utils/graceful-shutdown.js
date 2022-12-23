@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// const client = require("../api/redis");
+const client = require("../api/redis");
 
 /**
  * Graceful Shutdown server, DB, and any other processes when we receive a SIGTERM or SIGINT event
@@ -20,7 +20,7 @@ exports.preShutdown = signal => {
   return new Promise((resolve) => {
     console.log(`${signal} received!`);
     console.log('Cleaning up')
-    // client.quit();
+    client.quit();
     resolve();
   });
 }
